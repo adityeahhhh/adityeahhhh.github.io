@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy</title>
+    <style>
+        @font-face {
+            font-family: "Gridstar";
+            src: local("Gridstar"), url("Gridstar.otf") format("opentype");
+        }
+
+        body {
+            font-family: 'Gridstar';
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+        header {
+            background-color: #cc101b;
+            color: #fff;
+            padding: 1px;
+            font-size: 29px;
+            text-align: center;
+            position: relative; /* Ensure a positioning context for absolute positioning of child elements */
+            z-index: 1; /* Set z-index to bring header to the front */
+        }
+
+        .left-photo, .right-photo {
+            max-width: 150px; /* Adjust the max-width as needed */
+            height: auto;
+            position: absolute;
+            bottom: 50px;
+            transform: translateY(50%);
+            z-index: -1; /* Set z-index to move images to the back */
+        }
+
+        .left-photo {
+            left: 0;
+        }
+
+        .right-photo {
+            right: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #cc101b;
+        }
+
+        p {
+            font-family: "Trebuchet MS";
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: left;
+            padding-left: 40px;
+        }
+
+        ol {
+            color: #a62828;
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        .jeopardy-image {
+            max-width: 100%;
+            height: 800px;
+            margin-top: 20px;
+            filter: brightness(100%);
+            float: right; /* Float the image to the right */
+            margin-left: 0px; /* Adjust this margin as needed */
+        }
+
+        .register-link {
+            color: #730364;
+            font-size: 80px;
+            text-align: right;
+            text-shadow: 0 0 75px rgba(255, 255, 255, 0.35);
+            text-decoration: none;
+            float: right;
+            clear: ce;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            Jeopardy
+         
+	    <img src="dett.png" alt="Left Photo" class="left-photo">
+            <img src="dettr.png" alt="Right Photo" class="right-photo">
+        </h1>
+    </header>
+
+    <main>
+        <img class="jeopardy-image" src="det.png" alt="Detective Image">
+        <h2>Welcome to Jeopardy!</h2>
+        <p>In this unorthodox event, teams will delve into the psyche of a criminal and try to understand the other side of the story in a crime. Starting out from lowly thugs, they will make their way up the ladder as characters into the minds of the high level crime bosses. In the end, teams will orchestrate a mob war, Godfather-style.</p>
+
+        <h2>Event Details</h2>
+        <p>○ Date: 6th - 9th March</p>
+        <p>○ Time: 4:00 to 5:00 PM</p>
+        <p>○ Location: AB5 209, 210</p>
+
+        <h2>How to Participate</h2>
+        <p>Register for the event on our website.</p>
+        <p>Attend the event on the specified date and time.</p>
+        <p>Solve crime-related challenges and uncover the secrets.</p>
+        <p>Win mysterious prizes!</p>
+
+        <h3><a href="https://revelsmit.in/event" class="register-link">Register Here!</a></h3>
+    </main>
+</body>
+</html>
