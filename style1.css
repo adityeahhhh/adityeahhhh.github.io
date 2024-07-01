@@ -1,49 +1,144 @@
-h1{
-color:white;font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
-}
-img{
-    float:left;
-}
-body{
-    color:white;font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;font-size:medium;
-}
-p{
-    margin-left:20px;
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Raleway", sans-serif;
 }
 
-  
-  @keyframes ScreenEffect {
-    0% { opacity: 0 }
-    50% { opacity: 1 }
-    100% { opacity: 0 }
-  }
-  
-  .Pulse {
-    animation: Pulse 1.5s ease infinite;
-  }
-  
-  @keyframes Pulse {
-    0% { opacity: 0 }
-    50% { opacity: 1 }
-    100% { opacity: 0 }
-  }
-  
-  .DivClass {
+:root {
+    --bg-color: #1b1b1b; /* Darker background color */
+    --second-bg-color: #242424; /* Slightly lighter dark background */
+    --text-color: #e0e0e0; /* Muted text color */
+    --main-color: #0ef;
+    --button-color: #007BFF; /* Blue button color */
+    --button-hover-color: #0056b3; /* Darker blue on hover */
+    --overlay-color: rgba(0, 0, 0, 0.7); /* Dark overlay color */
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+
+.header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background: var(--second-bg-color);
+}
+
+.header .logo {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.header .navbar a {
+    margin-left: 2rem;
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+}
+
+/* Home Section with Background Image and Overlay */
+.home {
+    position: relative;
+    background: url('../images/back1.jpg') no-repeat center center/cover;
+    color: var(--text-color);
+    text-align: center;
+    padding: 10rem 5%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+    z-index: -1;
+}
+
+.home h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.home p {
+    font-size: 2rem;
+    color: var(--text-color);
+    max-width: 60rem;
+}
+
+/* Resume Section Button */
+.resume {
+    text-align: center;
+}
+
+.resume-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: var(--button-color);
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.resume-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Other Sections */
+section {
+    padding: 5rem 5%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    
-    padding: 5% 5% 5% 5%;
-  }
-  
-  .MatrixTextEffect {
-    color: rgba(125,225,125,0.75);
-    font-family: 'VT323', monospace;
-    font-size: 25px;
-    text-shadow: 0 0 5px rgba(125,225,125,0.5), 0 0 15px rgba(125,250,125,1);
-  }
-  button{
- background-color:#000f0f;color:rgba(125,225,125,0.75);border-radius:10px;font-size:larger;font-family: 'VT323', monospace;
-  }
-  
+}
+
+section h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.4rem;
+}
+
+section p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 60rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--second-bg-color);
+}
+
+.footer p {
+    font-size: 1.4rem;
+}
