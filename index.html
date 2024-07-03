@@ -1,50 +1,130 @@
-    <!DOCTYPE HTML>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Aditya Gosavi's Portfolio</title>
-            <link rel="stylesheet" href="css/style.css">
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
-        </head>
-        <body>
-            <header class="header">
-                <a href="#" class="logo">Portfolio</a>
-                <nav class="navbar">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#resume">Resume</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </header>
-            
-            <section id="home" class="home">
-                <h1>Hi, I'm Aditya Gosavi. </h1>
-                <p>I’m a 3rd year CSE student at Manipal.</p>
-            </section>
+<!DOCTYPE HTML>
+<html lang="en">
 
-            <section id="about" class="about">
-                <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, veritatis numquam nisi accusantium asperiores, officia officiis repellat, deleniti neque cupiditate pariatur dolor deserunt dolorum nam nihil maxime nemo quas odio?</p>
-            </section>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Gosavi's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
 
-            <section id="resume" class="resume">
-                <h2>Resume</h2>
-                <p>Download my resume for detailed information about my experience and skills.</p>
-                <a href="resume.pdf" class="resume-button" target="_blank" rel="noopener noreferrer">Download Resume</a>
-            </section>
-            
+<body>
+    <header class="header">
+        <div class="menu-toggle" onclick="toggleSidebar()">☰</div> <!-- Hamburger button -->
+        <a href="#" class="logo"></a>
+    </header>
 
-            <section id="contact" class="contact">
-                <h2>Contact Me</h2>
-                <p></p>
-            </section>
+    <aside id="sidebar" class="sidebar">
+        <nav class="navbar">
+            <a href="#home" onclick="toggleSidebar()">Home</a>
+            <a href="#about" onclick="toggleSidebar()">About</a>
+            <a href="#resume" onclick="toggleSidebar()">Resume</a>
+            <a href="#contact" onclick="toggleSidebar()">Contact</a>
+        </nav>
+        <footer class="sidebar-footer">
+            <p>&copy; 2024 Aditya Gosavi.<br>All rights reserved.</p>
+        </footer>
+    </aside>
 
-            <footer class="footer">
-                <p>&copy; 2024 Aditya Gosavi. All rights reserved.</p>
-            </footer>
-        </body>
-    </html>
+    <main>
+        <section id="home" class="home">
+            <h1><a href="#" class="glitch" data-glitch="Hello,">Hello,<br></a> I'm Aditya Gosavi.</h1>
+            <p>I’m a 3rd year CSE student at Manipal.</p>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/aditya-gosavi-7b879727a/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/adityeahhhh">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/adit.yeahhhh/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+            <p>Passionate about anything tech-related from my childhood, I am dedicated to proving useful in all roles I take up in my career. Actively seeking interships and job opportunities in relevant fields, I am also eager to learn and explore new domains! My hobbies include playing football, video games, swimming, reading.
+            </p>
+
+        </section>
+
+        <section class="about">
+            <h2>Education</h2>
+            <div class="education-container">
+                <ul>
+                    <li>
+                        <h3><b></b>B.Tech. Computer Science Engineering (with specialization in AI & ML)</h3>
+                        <h4>Manipal Institute of Technology, Manipal, Karnataka, India</h4>
+                        <h4>2022-2026 (expected)</h4>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="resume" class="resume">
+            <h2>Resume</h2>
+            <p>Download my resume for detailed information about my experience and skills.</p>
+            <a href="resume.pdf" class="resume-button" target="_blank" rel="noopener noreferrer">Download Resume</a>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form" action="https://formspree.io/f/xwpekbob" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </section>
+        
+
+        <footer class="page-footer">
+            <p>&copy; 2024 Aditya Gosavi. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Select all elements with the class 'glitch'
+            var glitches = document.querySelectorAll('.glitch');
+
+            glitches.forEach(function (glitch) {
+                // Add the 'glitch-load' class
+                glitch.classList.add('glitch-load');
+
+                // Remove the 'glitch-load' class after the animation ends
+                glitch.addEventListener('animationend', function () {
+                    glitch.classList.remove('glitch-load');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
